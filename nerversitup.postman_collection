@@ -1,0 +1,354 @@
+{
+	"id": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+	"name": "nvs",
+	"description": "",
+	"order": [],
+	"folders": [
+		{
+			"name": "Authentication",
+			"description": "",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"order": [
+				"49f3f20d-c6f5-a5b5-e88c-8ba955125e05",
+				"5b896b59-aab2-28c1-a5b6-d806ec288deb"
+			],
+			"owner": "4269412",
+			"folders_order": [],
+			"id": "ee14a1a2-7b22-d0ed-a462-1f1346d4fbe7"
+		},
+		{
+			"name": "Order management",
+			"description": "",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"order": [
+				"0b431997-3e02-bbbd-d333-ed33012c4ce3",
+				"586c92f0-c602-45e6-43e6-5dc541b623f6",
+				"2f68190b-be13-5ea5-19d8-691e27bbfdd5"
+			],
+			"owner": "4269412",
+			"folders_order": [],
+			"id": "cb535282-cd8e-774c-e03b-c4ea75a33970"
+		},
+		{
+			"name": "Product management",
+			"description": "",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"order": [
+				"b0365d02-ac2b-3e21-22d7-6447b38ec333",
+				"79959846-a732-aff2-96b9-777f4d48b8ea"
+			],
+			"owner": "4269412",
+			"folders_order": [],
+			"id": "640b38c7-c030-fba6-ed59-77a23c28676e"
+		},
+		{
+			"name": "User management",
+			"description": "",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"order": [
+				"b03ef640-0850-fdd5-5202-6023c24ca51c",
+				"f9e61daa-b2b2-1808-93e6-eee356d06596"
+			],
+			"owner": "4269412",
+			"folders_order": [],
+			"id": "c821e0bc-afcf-badc-88f6-448212b79107"
+		}
+	],
+	"folders_order": [
+		"ee14a1a2-7b22-d0ed-a462-1f1346d4fbe7",
+		"c821e0bc-afcf-badc-88f6-448212b79107",
+		"640b38c7-c030-fba6-ed59-77a23c28676e",
+		"cb535282-cd8e-774c-e03b-c4ea75a33970"
+	],
+	"timestamp": 1607619425220,
+	"owner": "4269412",
+	"public": false,
+	"requests": [
+		{
+			"id": "0b431997-3e02-bbbd-d333-ed33012c4ce3",
+			"headers": "Authorization: {{token}}\nContent-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				},
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/order",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"data": [],
+			"dataMode": "raw",
+			"name": "สร้างรายการคำสั่งซื้อได้",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1607629958972,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "cb535282-cd8e-774c-e03b-c4ea75a33970",
+			"rawModeData": "{\n\t\"data\":{\n\t\t\"orders\":[\n\t\t\t{\n\t\t\t\t\"product_id\":1,\n\t\t\t\t\"count\":7,\n\t\t\t\t\"discount\":0\n\t\t\t},\n\t\t\t{\n\t\t\t\t\"product_id\":2,\n\t\t\t\t\"count\":5,\n\t\t\t\t\"discount\":0\n\t\t\t}\n\t\t\t]\n\t}\n}"
+		},
+		{
+			"id": "2f68190b-be13-5ea5-19d8-691e27bbfdd5",
+			"headers": "Authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/order/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"data": null,
+			"dataMode": "params",
+			"name": "ดูรายละเอียดคำสั่งซื้อ",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1607630692782,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "cb535282-cd8e-774c-e03b-c4ea75a33970"
+		},
+		{
+			"id": "49f3f20d-c6f5-a5b5-e88c-8ba955125e05",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/register",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1607647008015,
+			"name": "สามารถสมัครสมาชิกได้",
+			"description": "",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"responses": [],
+			"rawModeData": "{\n\t\"data\":{\n\t\t\"username\":\"my_usernames\",\n\t\t\"password\":\"my_passwords\",\n\t\t\"confirm_password\":\"my_passwords\",\n\t\t\"firstName\":\"Myname\",\n\t\t\"lastName\":\"Mylastname\"\n\t}\n}"
+		},
+		{
+			"id": "586c92f0-c602-45e6-43e6-5dc541b623f6",
+			"headers": "Authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/order/cancel/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "PUT",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"data": null,
+			"dataMode": "params",
+			"name": "ยกเลิกคำสั่งซื้อ",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1607629975728,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "cb535282-cd8e-774c-e03b-c4ea75a33970"
+		},
+		{
+			"id": "5b896b59-aab2-28c1-a5b6-d806ec288deb",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/login",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"data": [],
+			"dataMode": "raw",
+			"name": "มีระบบ Login",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1607629781606,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "ee14a1a2-7b22-d0ed-a462-1f1346d4fbe7",
+			"rawModeData": "{\n\t\"data\":{\n\t\t\"username\":\"my_username\",\n\t\t\"password\":\"my_password\"\n\t}\n}"
+		},
+		{
+			"id": "79959846-a732-aff2-96b9-777f4d48b8ea",
+			"headers": "Authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/product/1",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"data": null,
+			"dataMode": "params",
+			"name": "สามารถดูข้อมูลของแต่ละ Product ได้",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1607629846037,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "640b38c7-c030-fba6-ed59-77a23c28676e"
+		},
+		{
+			"id": "b0365d02-ac2b-3e21-22d7-6447b38ec333",
+			"headers": "Authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/product",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"data": null,
+			"dataMode": "params",
+			"name": "เรียกดู Product ทั้งหมดที่มีในระบบ",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1607629861896,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "640b38c7-c030-fba6-ed59-77a23c28676e"
+		},
+		{
+			"id": "b03ef640-0850-fdd5-5202-6023c24ca51c",
+			"headers": "Authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/profile",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"data": null,
+			"dataMode": "params",
+			"name": "เรียกดู Profile ของตัวเอง",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1607629801598,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c821e0bc-afcf-badc-88f6-448212b79107"
+		},
+		{
+			"id": "f9e61daa-b2b2-1808-93e6-eee356d06596",
+			"headers": "Authorization: {{token}}\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "{{token}}",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:3000/order",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "2f1b25ca-3e4a-8016-a26a-f439a6145e22",
+			"data": null,
+			"dataMode": "params",
+			"name": "เรียกดู Order history ของตัวเอง",
+			"description": "",
+			"descriptionFormat": "html",
+			"time": 1607629924786,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"folder": "c821e0bc-afcf-badc-88f6-448212b79107"
+		}
+	]
+}
