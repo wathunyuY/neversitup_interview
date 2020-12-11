@@ -9,7 +9,7 @@ export class AuthenticationService {
         this.client = ClientProxyFactory.create({
             transport: Transport.TCP,
             options: {
-                host: '127.0.0.1',
+                host: 'nvs_auth',
                 port: 8877,
             },
         });

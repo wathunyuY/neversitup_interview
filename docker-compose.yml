@@ -1,0 +1,58 @@
+version: "3.4"
+
+services:
+  db:
+    image: mariadb
+    container_name: db
+    restart: always
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: rootroot
+      MYSQL_DATABASE: neversitup
+
+  nvs_main:
+    image: main:latest
+    build: ./neversitup
+    container_name: main
+    depends_on: 
+      - nvs_auth
+    ports:
+      - 3000:3000
+    command: ["npm", "run", "start:dev"]
+  nvs_auth:
+    image: auth:latest
+    build: ./authentication
+    container_name: auth
+    depends_on: 
+      - db
+    ports:
+      - 8877:8877
+    command: ["npm", "run", "start:dev"]
+  nvs_user:
+    image: user:latest
+    build: ./user-management
+    container_name: user
+    depends_on: 
+      - db
+    ports:
+      - 8878:8878
+    command: ["npm", "run", "start:dev"]
+  nvs_product:
+    image: product:latest
+    build: ./product-management
+    container_name: product
+    depends_on: 
+      - db
+    ports:
+      - 8879:8879
+    command: ["npm", "run", "start:dev"]
+  nvs_order:
+    image: order:latest
+    build: ./order-management
+    container_name: order
+    depends_on: 
+      - db
+    ports:
+      - 8880:8880
+    command: ["npm", "run", "start:dev"]

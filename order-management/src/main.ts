@@ -8,7 +8,7 @@ async function bootstrap() {
     {
       transport: Transport.TCP,
       options:{
-        host:'127.0.0.1',
+        host:'nvs_order',
         port:8880
       }
     },

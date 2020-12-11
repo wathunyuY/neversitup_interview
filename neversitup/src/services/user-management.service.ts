@@ -9,7 +9,7 @@ export class UserManageMentService {
         this.client = ClientProxyFactory.create({
             transport: Transport.TCP,
             options: {
-                host: '127.0.0.1',
+                host: 'nvs_user',
                 port: 8878,
             },
         });
